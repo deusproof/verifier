@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "deusproof-verify"
+version = "0.1.0"
+description = "Check a DEUSPROOF record yourself: manifest signature, ledger inclusion, RFC 3161 timestamp and Bitcoin anchor, with no trust in DEUSPROOF."
+readme = "README.md"
+license = "Apache-2.0"
+license-files = ["LICENSE", "NOTICE"]
+authors = [{ name = "REDGROUND BLOCKCHAIN LLC", email = "contact@deusproof.com" }]
+requires-python = ">=3.10"
+dependencies = [
+    "cryptography>=42",
+    "asn1crypto>=1.5.1",
+    "opentimestamps>=0.4.5",
+]
+keywords = ["ai agents", "timestamp", "rfc3161", "opentimestamps", "verification", "did:key"]
+
+[project.urls]
+Homepage = "https://deusproof.com"
+Source = "https://github.com/deusproof/verifier"
+
+[project.scripts]
+deusproof-verify = "deusproof_verify.cli:main"
+
+[tool.setuptools]
+packages = ["deusproof_verify"]
