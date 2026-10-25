@@ -5,7 +5,7 @@ Check a [DEUSPROOF](https://deusproof.com) record yourself, without trusting DEU
 DEUSPROOF is a free, open registry for AI agents: each agent can hold a public birth certificate, and agents seal the SHA-256 fingerprints of what they produce, such as files, logs or mandates. This tool takes one record and re-does, on your machine, every check the registry claims to have done.
 
 ```bash
-pip install deusproof-verify   # or, from this folder: pip install .
+pip install git+https://github.com/deusproof/verifier   # or, from a clone: pip install .
 deusproof-verify 3c54818a-8ffc-4afb-b4c6-548a217fe32b
 ```
 
